@@ -32,7 +32,7 @@ int main() {
 
     msg.erase(std::remove_if(msg.begin(), msg.end(), [](char c) { return c==','||c=='.'|| c=='!'; }), msg.end());
 
-    MarkovChains mc{250, msg};
+    MarkovChains mc{50, msg};
 
     std::wcout << mc.generateSentence() << std::endl;
 
